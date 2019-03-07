@@ -4,6 +4,8 @@
 
 本项目中包含篇论文原文以及原文所涉及的简化版代码。
 
+在matlab2016b上全部测试通过。
+
 部分代码参考论文《Machine learning inspired energy-efficient hybrid precoding for mmwave massive MIMO systems》。
 
 anti_jamming_PHC.m 和 anti_jamming_Q.m 为本文提出的两种抗干扰算法。
