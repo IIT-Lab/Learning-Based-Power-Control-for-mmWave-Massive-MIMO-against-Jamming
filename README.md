@@ -2,7 +2,7 @@
 
 论文原地址: https://ieeexplore.ieee.org/abstract/document/8647173
 
-本项目中包含篇论文原文以及原文所涉及的简化版代码。
+本项目中包含本篇论文原文以及原文所涉及的简化版代码。
 
 在matlab2016b上全部测试通过。
 
