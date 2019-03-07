@@ -106,10 +106,12 @@ for episode = 1:num_episode
             
         
         
-        %update Q_table        
+        %update Q_table
+        [~,transmitter_R_next_selection] = find(transmitter_R_space == floor(transmitter_rate));
+        transmitter_next_power_selection = jammer_next_action_selection;
         Q_transmitter(transmitter_R_selection,transmitter_power_selection,transmitter_action_selection)=...
             (1-alpha1)*Q_transmitter(transmitter_R_selection,transmitter_power_selection,transmitter_action_selection)+...
-            alpha1*(transmitter_utility+delta1*max(Q_transmitter(transmitter_R_selection,transmitter_power_selection,:)));
+            alpha1*(transmitter_utility+delta1*max(Q_transmitter(transmitter_R_next_selection,transmitter_next_power_selection,:)));
         
         Q_jammer(jammer_state_selection,jammer_next_action_selection)=...
             (1-alpha2)*Q_jammer(jammer_state_selection,jammer_next_action_selection)+...
